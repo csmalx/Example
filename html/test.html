@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>tEST</title>
+	<link rel="stylesheet" type="text/css" href="css/test.css">
+</head>
+<body>
+	<div class="text_links">
+		<a href="#" id="social" class="menu_link">
+			<h3 id="social" class="menu_link">Even&Odd</h3>
+		</a>
+	</div>
+	<div id="social_bottons">
+		<a href="#" id="see"><i class="see_btn"></i></a>
+		<a href="#" id="favo"><img src="img/favo.png" id="favo_btn"></a>
+		<a href="#" id="copy"><img src="img/copy.jpg" id="copy_btn"></a>
+		<a href="#" id="cart"><img src="img/cart1.png" id="cart_btn"></a>
+	</div>
+
+
+
+
+
+
+
+
+	<script 
+			src="https://code.jquery.com/jquery-3.1.1.js" 
+			integrity="sha256-16cdPddA6VdVInumRGo6IbivbERE8p7CQR3HzTBuELA="
+	  		crossorigin="anonymous"></script>
+	
+	<script>
+		$().ready(function() {
+
+		$("#social_buttons").hide();
+
+		$("#social").mouseover(function() {
+		      $("#social").addClass("hidden");
+		      $("#social_buttons").fadeIn("slow");
+		      setTimeout(function(){
+			        $("#social_bottons").hide();
+			        $("#social").removeClass("hidden");
+			      }, 5000);
+		    });
+
+
+		      var s = null;
+		      $( "#social_buttons" ).mouseleave(function() {
+
+		        clearTimeout(s);
+		        $("#social_buttons").hide();
+		        
+		        s = setTimeout('$("#social").removeClass("hidden");', 100);
+		      });
+		});		
+	</script>
+</body>
+</html>

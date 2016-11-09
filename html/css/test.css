@@ -1,0 +1,20 @@
+.menu_link {
+    margin-right: 10px;
+    color: red;
+    font-weight: bold;
+}
+
+
+
+#skype-btn, #facebook-btn, #tumblr-btn {
+    width: 24px;
+}
+
+#social_buttons {
+    position: absolute;
+right: 260px;
+top: 5px;
+}
+
+
+.hidden { display: none !important; }
